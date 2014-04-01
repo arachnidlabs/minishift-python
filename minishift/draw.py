@@ -22,7 +22,6 @@ class MCP2210Interface(Interface):
         self.device = mcp2210.MCP2210(vid, pid)
 
     def send(self, data):
-        print data.encode('hex')
         self.device.transfer(data)
 
 
