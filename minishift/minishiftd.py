@@ -139,7 +139,10 @@ def main(args):
         port = args.port
     port = int(port)
 
-    httpd = SocketServer.TCPServer((ip, port), RequestHandler)
+    httpd = SocketServer.TCPServer((ip, port), RequestHandler, False)
+    httpd.allow_reuse_address = True
+    httpd.server_bind()
+    httpd.server_activate()
     logging.info("Serving on %s", args.port)
     httpd.serve_forever()
 
