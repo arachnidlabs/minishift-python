@@ -2,7 +2,6 @@
 
 import argparse
 import BaseHTTPServer
-import daemon
 import itertools
 import logging
 from minishift.draw import MCP2210Interface, Canvas, Minishift
@@ -147,6 +146,7 @@ def main(args):
 if __name__ == '__main__':
     args = parser.parse_args()
     if args.daemonise:
+        import daemon
         with daemon.DaemonContext():
             main(args)
     else:

@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name="minishift-python",
-      version="0.1.3",
+      version="0.1.4",
       description="Python interface for the minishift",
       author="Nick Johnson",
       author_email="nick@arachnidlabs.com",
