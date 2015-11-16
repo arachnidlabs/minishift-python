@@ -34,7 +34,7 @@ and scrolling is supported with 'infinite' canvases that expand as needed:
     >>> canvas = minishift.Canvas()
     >>> canvas.write_text(0, "This is a message that's far too long for a display.")
     >>> for slice in canvas.scroll():
-    >>>     ms.update(canvas)
+    >>>     ms.update(slice)
     >>>     time.sleep(0.05)
 
 ## HTTP Interface
